@@ -1,17 +1,18 @@
 n = int(input())
-arr = []
-for i in range(n):
-    arr.append(list(map(int, input().split())))
+time = []
 
-count = 0
-for i in range(n):
-    work = arr[i]
-    cnt = 1
-    for j in range(i+1, n):
-        if work[1] <= arr[j][0]:
-            work = arr[j]
-            cnt += 1
-    if count <= cnt:
-        count = cnt
+for _ in range(n):
+    start, end = map(int, input().split())
+    time.append([start, end])
 
-print(count)
+time = sorted(time, key=lambda a: a[0]) 
+time = sorted(time, key=lambda a: a[1])
+last = 0 
+conut = 0
+
+for i, j in time:
+    if i >= last:
+        conut += 1
+        last = j
+
+print(conut)
