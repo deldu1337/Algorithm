@@ -14,7 +14,7 @@ for i in range(9):
                 break
     if a > -1 and b > -1:
         break
-print(a,b)
+
 answer = []
 for i in range(9):
     if i == a or i == b:
