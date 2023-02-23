@@ -1,7 +1,9 @@
 n = int(input())
-arr = []
+arr = [[] for _ in range(n)]
 for i in range(n):
-    arr.append(list(map(str, input().split())))
+    a,b = map(str, input().split())
+    arr[i].append(int(a))
+    arr[i].append(b)
 
 arr.sort(key=lambda x:x[0])
 
