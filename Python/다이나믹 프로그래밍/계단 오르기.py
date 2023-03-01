@@ -1,8 +1,8 @@
 from sys import stdin
 input = stdin.readline
 n = int(input())
-s = [0 for i in range(301)]
-dp = [0 for i in range(301)]
+s = [0 for i in range(301)]  # 점수 리스트
+dp = [0 for i in range(301)] # 점수의 합 리스트
 for i in range(n):
     s[i] = int(input())
 dp[0] = s[0]
